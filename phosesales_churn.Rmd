@@ -1,0 +1,28 @@
+---
+title: "Phone Sales Churn"
+author: "Kenneth B. Hunt, MBA"
+date: "June 13, 2018"
+output: html_document
+---
+This is an anlysis of a data set containing 6 variables, and 1000 observations. The response variable of this dataset is "churn", which describes where a customer will leave the company based on the other variables which are "predictors". 
+
+
+```{r}
+phone <- read.csv("phone.csv")
+```
+
+```{r echo=FALSE}
+library(ggplot2)
+```
+
+
+```{r}
+ggplot(phone, aes(churn)) + geom_bar(fill="red") +
+  labs(title="Phone Company Sales Churn", subtitle="Class Imbalance Problem", caption="Kenneth B. Hunt, MBA", face="bold")
+```
+As we can see in the initial plot, we are facing a severe class imbalance problem that will need to be addressed in order to have high performance in most algorithms. 
+
+
+
+
+
